@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://landonmckell:Samoa4life!@udemydevconnector.yifm4.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mySecretToken"
+}
