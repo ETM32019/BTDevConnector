@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://landonmckell:Samoa4life!@udemydevconnector.yifm4.mongodb.net/<dbname>?retryWrites=true&w=majority",
-  "jwtSecret": "mySecretToken"
+  "jwtSecret": "mySecretToken",
+  "githubClientId": "a0c502a29a104670f044",
+  "githubSecret": "1050556a50450e2f72fb25f41a7a7ae2e60657d7"
 }
