@@ -4,12 +4,12 @@ import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 import { Link, withRouter } from "react-router-dom";
 
-function EditProfile({
+const EditProfile = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
   history
-}) {
+}) => {
   const [formData, setFormData] = useState({
     company: "",
     website: "",
@@ -80,9 +80,9 @@ function EditProfile({
         profile stand out
       </p>
       <small>* = required field</small>
-      <form className="form" onSubmit={e => onSubmit(e)}>
+      <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
-          <select name="status" value={status} onChange={e => onChange(e)}>
+          <select name="status" value={status} onChange={onChange}>
             <option value="0">* Select Professional Status</option>
             <option value="Developer">Developer</option>
             <option value="Junior Developer">Junior Developer</option>
@@ -103,7 +103,7 @@ function EditProfile({
             placeholder="Company"
             name="company"
             value={company}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           />
           <small className="form-text">
             Could be your own company or one you work for
@@ -115,7 +115,7 @@ function EditProfile({
             placeholder="Website"
             name="website"
             value={website}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           />
           <small className="form-text">
             Could be your own or a company website
@@ -127,7 +127,7 @@ function EditProfile({
             placeholder="Location"
             name="location"
             value={location}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           />
           <small className="form-text">
             City & state suggested (eg. Boston, MA)
@@ -139,7 +139,7 @@ function EditProfile({
             placeholder="* Skills"
             name="skills"
             value={skills}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           />
           <small className="form-text">
             Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
@@ -151,7 +151,7 @@ function EditProfile({
             placeholder="Github Username"
             name="githubusername"
             value={githubusername}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           />
           <small className="form-text">
             If you want your latest repos and a Github link, include your
@@ -163,7 +163,7 @@ function EditProfile({
             placeholder="A short bio of yourself"
             name="bio"
             value={bio}
-            onChange={e => onChange(e)}
+            onChange={onChange}
           ></textarea>
           <small className="form-text">Tell us a little about yourself</small>
         </div>
@@ -188,7 +188,7 @@ function EditProfile({
                 placeholder="Twitter URL"
                 name="twitter"
                 value={twitter}
-                onChange={e => onChange(e)}
+                onChange={onChange}
               />
             </div>
 
@@ -199,7 +199,7 @@ function EditProfile({
                 placeholder="Facebook URL"
                 name="facebook"
                 value={facebook}
-                onChange={e => onChange(e)}
+                onChange={onChange}
               />
             </div>
 
@@ -210,7 +210,7 @@ function EditProfile({
                 placeholder="YouTube URL"
                 name="youtube"
                 value={youtube}
-                onChange={e => onChange(e)}
+                onChange={onChange}
               />
             </div>
 
@@ -221,7 +221,7 @@ function EditProfile({
                 placeholder="Linkedin URL"
                 name="linkedin"
                 value={linkedin}
-                onChange={e => onChange(e)}
+                onChange={onChange}
               />
             </div>
 
@@ -232,7 +232,7 @@ function EditProfile({
                 placeholder="Instagram URL"
                 name="instagram"
                 value={instagram}
-                onChange={e => onChange(e)}
+                onChange={onChange}
               />
             </div>
           </Fragment>
@@ -245,7 +245,7 @@ function EditProfile({
       </form>
     </Fragment>
   );
-}
+};
 
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,

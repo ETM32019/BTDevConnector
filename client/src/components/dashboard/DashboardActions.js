@@ -2,8 +2,6 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-DashboardActions.propTypes = {};
-
 function DashboardActions(props) {
   return (
     <Fragment>
