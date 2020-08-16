@@ -45,7 +45,7 @@ const ProfileTop = ({
             {social.linkedin}
           </a>
         )}
-        {social && social.instgram && (
+        {social && social.instagram && (
           <a href={social.instagram} target="_blank" rel="noopener noreferrer">
             {social.instagram}
           </a>
